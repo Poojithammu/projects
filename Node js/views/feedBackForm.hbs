@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Feedback Form</title>
+</head>
+{{> nav}}
+<body>
+    <div class="container">
+        <h1>Student Feedback Form</h1>
+        <form action="/feedback" method="POST">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter full name" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="text" id="phone" name="phone" pattern="[0-9]{10}" placeholder="Enter 10-digit phone number" required>
+            </div>
+            <div class="form-group">
+                <label for="rollNo">Roll Number:</label>
+                <input type="text" id="rollNo" name="rollNo" placeholder="Enter roll number" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="subject">Subject:</label>
+                <select id="subject" name="subject" required>
+                    <option value="">Select Subject</option>
+                    <option value="OS">Operating Systems</option>
+                    <option value="BEFA">Business Economics & Financial Analysis</option>
+                    <option value="DM">Discrete Mathematics</option>
+                    <option value="DBMS">Database Management System</option>
+                    <option value="SE">Software Engineering</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="branch">Branch:</label>
+                <select id="branch" name="branch" required>
+                    <option value="">Select Branch</option>
+                    <option value="CSE-CS">CSE-CS</option>
+                    <option value="CSE-AIML">CSE-AIML</option>
+                    <option value="CSE-DS">CSE-DS</option>
+                    <option value="CSE">CSE</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="section">Section:</label>
+                <select id="section" name="section" required>
+                    <option value="">Select Section</option>
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="feedback">Feedback:</label>
+                <textarea id="feedback" name="feedback" rows="4" required></textarea>
+            </div>
+            <button type="submit">Submit Feedback</button>
+        </form>
+    </div>
+
+    <script>
+        function validateForm() {
+            let isValid = true;
+
+            // Resetting all inputs and feedback
+            const inputs = document.querySelectorAll('input, select, textarea');
+            inputs.forEach(input => {
+                input.classList.remove('is-invalid');
+                const feedbackDiv = input.nextElementSibling;
+                if (feedbackDiv && feedbackDiv.classList.contains('invalid-feedback')) {
+                    feedbackDiv.style.display = 'none';
+                }
+            });
+
+            // Validating each field
+            const name = document.getElementById('name').value.trim();
+            if (name === '') {
+                document.getElementById('name').classList.add('is-invalid');
+                document.getElementById('name').nextElementSibling.style.display = 'block';
+                isValid = false;
+            }
+
+            const phone = document.getElementById('phone').value.trim();
+            if (!phone.match(/^\d{10}$/)) {
+                document.getElementById('phone').classList.add('is-invalid');
+                document.getElementById('phone').nextElementSibling.style.display = 'block';
+                isValid = false;
+            }
+
+            const rollNo = document.getElementById('rollNo').value.trim();
+            if (rollNo === '') {
+                document.getElementById('rollNo').classList.add('is-invalid');
+                document.getElementById('rollNo').nextElementSibling.style.display = 'block';
+                isValid = false;
+            }
+
+            const email = document.getElementById('email').value.trim();
+            if (email === '' || !isValidEmail(email)) {
+                document.getElementById('email').classList.add('is-invalid');
+                document.getElementById('email').nextElementSibling.style.display = 'block';
+                isValid = false;
+            }
+
+            const subject = document.getElementById('subject').value;
+            if (subject === '') {
+                document.getElementById('subject').classList.add('is-invalid');
+                document.getElementById('subject').nextElementSibling.style.display = 'block';
+                isValid = false;
+            }
+
+            const branch = document.getElementById('branch').value;
+            if (branch === '') {
+                document.getElementById('branch').classList.add('is-invalid');
+                document.getElementById('branch').nextElementSibling.style.display = 'block';
+                isValid = false;
+            }
+
+            const section = document.getElementById('section').value;
+            if (section === '') {
+                document.getElementById('section').classList.add('is-invalid');
+                document.getElementById('section').nextElementSibling.style.display = 'block';
+                isValid = false;
+            }
+
+            const feedback = document.getElementById('feedback').value.trim();
+            if (feedback === '') {
+                document.getElementById('feedback').classList.add('is-invalid');
+                document.getElementById('feedback').nextElementSibling.style.display = 'block';
+                isValid = false;
+            }
+
+            return isValid;
+        }
+
+        function isValidEmail(email) {
+            // Very basic email validation (regex can be improved for more strict validation)
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+    </script>
+
+</body>
+    <style>
+        body {
+        font-family: Arial, sans-serif;
+        padding: 0%;
+        background-color:whitesmoke;
+        }
+
+        .container {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            height: 1000px;
+            width: 500px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            text-align: center;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            margin-top: 20px;
+        }
+
+        label {
+            margin-bottom: 10px;
+            font-weight: bold;
+            display: block;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 8px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        button[type="submit"] {
+            background-color: green;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        button[type="submit"]:hover {
+            background-color: blue;
+        }
+    </style>
+</html>

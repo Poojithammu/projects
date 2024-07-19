@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Details</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+{{> nav}}
+<body>
+    <div class="container mt-5">
+        <h1 class="mb-4">Feedback Details</h1>
+        
+    {{#if admin}}
+    <form class="d-flex">
+      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+    <br><br>
+        <table class="table table-bordered table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Name</th>
+                    <th>Phone No</th>
+                    <th>Roll No</th>
+                    <th>Email</th>
+                    <th>Subject</th>
+                    <th>Branch</th>
+                    <th>Section</th>
+                    <th>Feedback</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="feedbackTableBody">
+                {{#each feedbacks}}
+                <tr>
+                    <td>{{name}}</td>
+                    <td>{{phoneNo}}</td>
+                    <td>{{rollNo}}</td>
+                    <td>{{email}}</td>
+                    <td>{{subject}}</td>
+                    <td>{{branch}}</td>
+                    <td>{{section}}</td>
+                    <td>{{feedback}}</td>
+                    <td>
+                        <button class="btn btn-primary btn-sm edit-btn">Edit</button>
+                        <button class="btn btn-danger btn-sm delete-btn">Delete</button>
+                    </td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+        {{else}}
+    
+        <table class="table table-bordered table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Name</th>
+                    <th>Phone No</th>
+                    <th>Roll No</th>
+                    <th>Email</th>
+                    <th>Subject</th>
+                    <th>Branch</th>
+                    <th>Section</th>
+                    <th>Feedback</th>
+                </tr>
+            </thead>
+            <tbody id="feedbackTableBody">
+                {{#each feedbacks}}
+                <tr>
+                    <td>{{name}}</td>
+                    <td>{{phoneNo}}</td>
+                    <td>{{rollNo}}</td>
+                    <td>{{email}}</td>
+                    <td>{{subject}}</td>
+                    <td>{{branch}}</td>
+                    <td>{{section}}</td>
+                    <td>{{feedback}}</td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+        {{/if}}
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

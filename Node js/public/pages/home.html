@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS file -->
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="C:\Users\HP\Desktop\PROJECTS\ammu.html\images\logo.jfif" alt="Logo">
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="file:///C:/Users/DELL/Downloads/ammu.html/reg.html">Register</a></li>
+                <li><a href="file:///C:/Users/DELL/Downloads/ammu.html/login.html">Login</a></li>
+                <li><a href="">Contact us</a></li>
+            </ul>
+        </nav>
+        <div class="profile">
+            <img src="C:\Users\HP\Desktop\PROJECTS\ammu.html\images\profile.jfif" alt="Profile Icon" class="profile-icon">
+            <ul class="dropdown">
+                <li><a href="#profile">Profile</a></li>
+                <li><a href="#settings">Settings</a></li>
+                <li><a href="#logout">Logout</a></li>
+            </ul>
+        </div>
+</header>
+<section class="image-carousel">
+    <div class="carousel-container">
+<img src="C:\Users\HP\Desktop\PROJECTS\ammu.html\images\p3.jfif" alt="Image 1" class="slide">
+<img src="C:\Users\HP\Desktop\PROJECTS\ammu.html\images\p1.jfif" alt="Image 2" slide="slide">
+<img src="C:\Users\HP\Desktop\PROJECTS\ammu.html\images\p3.jfif" alt="Image 3" class="slide">
+<img src="C:\Users\HP\Desktop\PROJECTS\ammu.html\images\p3.jfif" alt="Image 4" class="slide">
+        
+    </div>
+    <div class="text">
+
+        <H1> Welcome To Student FeedBack System</H1>
+        <a href="file:///C:/Users/DELL/Downloads/ammu.html/feedbackform.html">
+            <button type="button">Provide feedback</button>
+          </a>
+    </div>
+    
+</section>
+<footer>
+    <div class="footer-content">
+        <p>&copy; 2024 Student Feedback System. All rights reserved. | Contact us: <a href="mailto:support@studentfeedbacksystem.com">support@studentfeedbacksystem.com</a> | Follow us: <a href="#" target="_blank">Facebook</a> | <a href="#" target="_blank">Twitter</a> | <a href="#" target="_blank">Instagram</a></p>
+    </div>
+</footer>
+</body>
+</html>
+    
+</body>
+</html>
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding-left: 0%;
+    height: 60%;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: lightblue;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 1rem 0;
+    margin-top: auto;
+    height: 70px;
+    margin-bottom:20px;
+}
+.logo {
+    margin-right: 230px;
+    /* Ensure logo stays on the left */
+}
+
+.logo img {
+    height: 50px;
+}
+
+
+
+.nav{
+    justify-content: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+}
+
+.nav-links li {
+    position: relative;
+    justify-content: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    justify-content:center;
+}
+
+.nav-links a:hover {
+    background-color: #e2e6ea;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-left: auto; /* Pushes profile to the right */
+}
+
+.profile-icon {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-right:50px; /* Adjust as needed */
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 50px;
+    background-color: white;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    border-radius: 4px;
+    list-style: none;
+    padding: 10px 0;
+    min-width: 150px;
+    z-index: 1;
+}
+
+.dropdown li {
+    padding: 8px 16px;
+}
+
+.dropdown li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+}
+
+.dropdown li:hover {
+    background-color: #f1f1f1;
+}
+
+.profile:hover .dropdown {
+    display: block;
+}
+
+.image-carousel {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 450px; /* Increase height for larger images */
+    background-color: mistyrose;
+    margin-top: 0px;
+}
+
+.carousel-container {
+    display: flex;
+    width: 200%;
+    animation: scroll 20s linear infinite;
+    height: 60%;
+}
+
+.carousel-container img {
+    width: 25%;
+    height: auto;
+    margin-right: 30px;
+}
+
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    height: 48px; /* Adjust height as needed */
+    width: 100%;
+    position: absolute;
+    margin-bottom:30px;
+    
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin-bottom:30px;
+    line-height: 48px; /* Center content vertically */
+}
+
+.footer-content p {
+    margin-bottom:30px;
+
+}
+
+.footer-content a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-content a:hover {
+    text-decoration: underline;
+
+}
+.text{
+    text-align: center;
+    margin-top:40px;
+}
+button{
+
+
+  width:300px;
+  height: 40px;
+  color:white;
+  background-color:blueviolet;
+  Margin-top:40px;
+}
+button:hover {
+    background-color:lightsteelblue;
+}
+
+</style>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+</head>
+<body>
+    <div class="container-box">
+        <h1>Student Registration Form</h1>
+        <form id="registrationForm">
+            <div class="input-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" placeholder="Enter Full Name" required>
+            </div>
+            <div class="input-group">
+                <label for="rollNumber">Roll Number:</label>
+                <input type="text" id="rollNumber" placeholder="Enter Roll Number" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Enter Password:</label>
+                <input type="password" id="password" placeholder="Enter Password" required>
+            </div>
+            <div class="input-group">
+                <label for="confirmPassword">Confirm Password:</label>
+                <input type="password" id="confirmPassword" placeholder="Re-Enter Password" required>
+            </div>
+            
+            <div class="input-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" placeholder="Enter Email Address" required>
+            </div>
+            
+            
+            <h2>Department</h2>
+            <div class="input-group">
+                <input type="radio" id="interest1" name="department" value="general cse" required>
+                <label for="interest1">CSE</label><br>
+                <input type="radio" id="interest2" name="department" value="cse(cs)" required>
+                <label for="interest2">CSE-CS</label><br>
+                <input type="radio" id="interest3" name="department" value="cse(ds)" required>
+                <label for="interest3">CSE-DS</label><br>
+                <input type="radio" id="interest4" name="department" value="cse(aiml)" required>
+                <label for="interest4">CSE-AIML</label>
+            </div>
+            <button type="submit">Submit</button>
+            <p class="login-link">Already registered? <a href="login.html">Login here</a></p>
+        </form>
+    </div>
+
+</body>
+</html>
+    <style>
+       body {
+        font-family: Arial, sans-serif;
+        background-color:white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+    }
+
+    .container-box {
+        background-color:whitesmoke;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 50%;
+        max-width: 600px;
+        min-height: 80%;
+        justify-content: center;
+    }
+
+    h1 {
+        border: 2px double black;
+        padding: 20px;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    h2 {
+        margin-top: 20px;
+        font-size: 1.5em;
+    }
+
+    .input-group {
+        margin-bottom: 15px;
+    }
+
+    .input-group label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+
+    .input-group input,
+    .input-group textarea {
+        width: 100%;
+        padding: 8px;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        margin-bottom: 5px;
+        box-sizing: border-box;
+    }
+
+    .input-group textarea {
+        resize: vertical;
+    }
+
+    button {
+        width: 100%;
+        padding: 10px;
+        background-color: #007BFF;
+        border: none;
+        color: white;
+        border-radius: 8px;
+        cursor: pointer;
+        height: 50px;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    button:hover {
+        background-color: #0056b3;
+    }
+
+    .login-link {
+        margin-top: 15px;
+        text-align: center;
+    }
+
+    .login-link a {
+        color: black;
+        text-decoration: underline;
+    }
+
+    .login-link a:hover {
+        text-decoration: underline;
+    }
+</style>
+
+
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const rollNumber = document.getElementById('rollNumber').value;
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            const email = document.getElementById('email').value;
+            const department = document.querySelector('input[name="department"]:checked');
+
+            if (!department) {
+                alert('Please select a department.');
+                return;
+            }
+
+            if (password !== confirmPassword) {
+                alert('Passwords do not match.');
+                return;
+            }
+
+            if (!validateEmail(email)) {
+                alert('Please enter a valid email address.');
+                return;
+            }
+
+            alert('Form submitted successfully!');
+            // Here you can write code to send the data to the server.
+        });
+
+        function validateEmail(email) {
+            const re = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            return re.test(email);
+        }
+</script>
