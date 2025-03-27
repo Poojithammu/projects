@@ -1,0 +1,88 @@
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">FMS</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+                <div class="title text-white text-center ">
+                    <h1>Faculty Management System</h1>
+                </div>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    {{#if is_login}}
+                    <li class="nav-item">
+                        <a class="nav-link" href="/home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/logout">Logout</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/aboutUs">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contactUs">Contact</a>
+                    </li>
+                    {{else}}
+                    <li class="nav-item">
+                        <a class="nav-link" href="/home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/login">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/aboutUs">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contactUs">Contact</a>
+                    </li>
+                    {{/if}}
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <style>
+    .navbar-brand {
+        font-size: 1.8rem; /* Bigger logo */
+        font-weight: 600; /* Bold logo */
+        color: #28a745 !important;
+    }
+    .navbar {
+        border-bottom: 2px solid #343a40; /* Adds a subtle border to the navbar */
+    }
+    .nav-link {
+        font-size: 1.1rem;
+        padding: 12px 18px;
+        font-weight: 500;
+        color: #f8f9fa !important;
+        transition: background-color 0.3s ease;
+    }
+
+    .nav-link:hover {
+        background-color: #0056b3; /* Blue hover effect */
+        border-radius: 5px;
+    }
+
+    .navbar-toggler-icon {
+        background-color: #fff;
+    }
+
+    .navbar-brand {
+        font-weight: bold;
+        font-size: 1.5rem;
+    }
+
+    .display-4 {
+        font-size: 3rem;
+        font-weight: 700;
+    }
+        .container{
+            height: 49rem;
+        }
+        .title{
+            margin-left: 40rem;
+        }
+        .container{
+            padding-top: 10rem;
+        }
+    </style>

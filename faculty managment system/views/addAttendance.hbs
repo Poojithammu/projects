@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Attendance - Faculty Management System</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            background: linear-gradient(to bottom, whitesmoke, skyblue);
+        }
+        .container {
+            margin-bottom: 1rem;
+        }
+        h2 {
+            font-weight: bold;
+            color: #28a745;
+            margin-bottom: 1.5rem;
+        }
+        .form-label {
+            font-weight: bold;
+        }
+        .btn {
+            border-radius: 5px;
+        }
+        .btn-success {
+            background-color: #28a745;
+            border-color: #28a745;
+        }
+        .btn-success:hover {
+            background-color: #218838;
+        }
+        footer {
+            background-color: #343a40;
+            color: #fff;
+            padding: 1rem 0;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    {{> navbar}}
+    {{#if is_login}}
+    <div class="container py-5">
+        <h2 class="text-center">Track Faculty Attendance</h2>
+        <form action="/addAttendance" method="POST" class="shadow p-4 bg-light rounded">
+            <div class="mb-3">
+                <label for="faculty_id" class="form-label">Faculty Member</label>
+                <select id="faculty_id" name="faculty_id" class="form-select" required>
+                    <option value="" disabled selected>Select a faculty member</option>
+                    {{#each details}}
+                        <option value="{{faculty_id}}">{{first_name}} {{last_name}}</option>
+                    {{/each}}
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="attendance_date" class="form-label">Date</label>
+                <input type="date" id="attendance_date" name="attendance_date" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Attendance Status</label>
+                <div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" id="present" name="status" value="Present" class="form-check-input" required>
+                        <label for="present" class="form-check-label">Present</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" id="absent" name="status" value="Absent" class="form-check-input" required>
+                        <label for="absent" class="form-check-label">Absent</label>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-success">Submit Attendance</button>
+            </div>
+        </form>
+    </div>
+    {{else}}
+    <div class="container py-5">
+        <h2 class="text-center">Faculty Attendance Records</h2>
+        <table class="table table-bordered table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>Faculty ID</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                    <th>Phone Number</th>
+                    <th>Attendance Date</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each attendanceDetails}}
+                <tr>
+                    <td>{{faculty_id}}</td>
+                    <td>{{first_name}}</td>
+                    <td>{{last_name}}</td>
+                    <td>{{email}}</td>
+                    <td>{{phone_number}}</td>
+                    <td>{{attendance_date}}</td>
+                    <td>{{status}}</td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+    {{/if}}
+    <footer>
+        <p class="text-center mb-0">&copy; 2024 Faculty Management System. All rights reserved.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
