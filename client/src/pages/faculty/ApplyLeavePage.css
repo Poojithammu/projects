@@ -1,0 +1,111 @@
+.apply-leave-container {
+  background: rgba(13, 13, 13, 0.85);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow:
+    0 0 10px #00ffc8aa,
+    inset 0 0 8px #00ffc8cc;
+  color: white;
+  border: 1px solid #00ffc8bb;
+}
+
+
+.neon-title {
+  color: #00ffc8;
+  text-shadow:
+    0 0 8px #00ffc8,
+    0 0 15px #00ffc8cc,
+    0 0 20px #00ffc8dd;
+  font-weight: 700;
+  text-align: center;
+}
+
+.neon-label {
+  color: #00bfa6;
+  font-weight: 600;
+  text-shadow:
+    0 0 5px #00ffc8aa;
+}
+
+.input-custom {
+  background: rgba(25, 25, 25, 0.6);
+  border: 1.5px solid #00ffc8aa;
+  border-radius: 20px;
+  color: white;
+  box-shadow:
+    inset 0 0 6px #00ffc8cc;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.input-custom:focus {
+  border-color: #00ffc8;
+  box-shadow:
+    0 0 12px #00ffc8dd,
+    inset 0 0 10px #00ffc8ff;
+  color: #00ffc8;
+  outline: none;
+}
+
+
+.input-error {
+  border-color: #ff0055 !important;
+  box-shadow:
+    0 0 12px #ff0055dd !important,
+    inset 0 0 8px #ff004488 !important,
+  color: #ff0055 !important,
+}
+
+
+.neon-error {
+  color: #ff0055;
+  text-shadow:
+    0 0 5px #ff0055aa;
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+
+.btn-neon {
+  background: transparent;
+  border: 2px solid #00ffc8;
+  color: #00ffc8;
+  border-radius: 20px;
+  font-weight: 600;
+  box-shadow:
+    0 0 10px #00ffc8aa;
+  transition: all 0.3s ease;
+}
+
+.btn-neon:hover,
+.btn-neon:focus {
+  background: #00ffc8;
+  color: #000;
+  box-shadow:
+    0 0 20px #00ffc8ff,
+    0 0 30px #00ffc8ff;
+  outline: none;
+  border-color: #00ffc8;
+  cursor: pointer;
+}
+
+input[type="date"] {
+  position: relative;
+  z-index: 1;
+  color: #00ffc8; 
+  background-color: #0d0d0d; 
+  border: 1px solid #00ffc8;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(100%) brightness(150%);
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+}
+

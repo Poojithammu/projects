@@ -1,0 +1,67 @@
+.glassy-form {
+  background: rgba(13, 13, 13, 0.85);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  box-shadow: 0 0 15px #00ffc8aa;
+  color: #00ffc8;
+}
+
+.neon-title {
+  color: #00ffc8;
+  text-shadow: 0 0 10px #00ffc8;
+  font-weight: 700;
+}
+
+.neon-label {
+  color: #00bfa6;
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+  margin-right: 1.5rem;
+  text-shadow: 0 0 4px #00bfa6aa;
+}
+
+.neon-input {
+  background-color: #0d0d0d;
+  border: 1.5px solid #00bfa6;
+  border-radius: 15px;
+  color: #00ffc8;
+  box-shadow: inset 0 0 8px #00bfa6;
+}
+
+.neon-input:focus {
+  outline: none;
+  border-color: #00ffc8;
+  box-shadow: 0 0 10px #00ffc8;
+  background-color: #121212;
+  color: #00ffc8;
+}
+
+.neon-table {
+  border-collapse: separate;
+  border-spacing: 0 10px;
+  width: 100%;
+}
+
+.neon-table th,
+.neon-table td {
+  border-radius: 12px;
+  padding: 0.75rem 1.2rem;
+  text-align: left;
+  color: #00ffc8;
+  background: rgba(0, 255, 200, 0.1);
+  box-shadow: 0 0 6px #00ffc8aa;
+}
+
+.neon-table th {
+  background: #002525;
+  font-weight: 700;
+  text-shadow: 0 0 5px #00ffc8;
+}
+
+.neon-text-muted {
+  color: #009e8f88;
+  font-style: italic;
+  text-align: center;
+  padding: 1rem;
+}

@@ -1,0 +1,32 @@
+.timetable-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 columns x 2 rows */
+    gap: 20px;
+}
+
+.timetable-day {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.timetable-day h6 {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.timetable-slots {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.slot-card {
+    background: #ffffff;
+    padding: 10px;
+    border-left: 4px solid #007bff;
+    border-radius: 6px;
+    font-size: 14px;
+}

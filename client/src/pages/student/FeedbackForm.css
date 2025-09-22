@@ -1,0 +1,63 @@
+.feedback-form-container {
+  background: rgba(13, 13, 13, 0.85);
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 255, 200, 0.05);
+  backdrop-filter: blur(10px);
+  color: #ffffff;
+}
+
+.form-title {
+  font-weight: 700;
+  color: #00ffc8;
+  text-shadow: 0 0 5px #00ffc8, 0 0 10px #00ffc8;
+}
+
+.form-group-custom {
+  margin-bottom: 1.5rem;
+}
+
+.form-label {
+  font-weight: 600;
+  color: #00bfa6;
+  text-shadow: 0 0 3px rgba(0, 255, 200, 0.3);
+}
+
+.form-control {
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 1px solid #00ffc8;
+  color: white;
+  border-radius: 12px;
+  padding: 10px;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.form-control:focus {
+  outline: none;
+  box-shadow: 0 0 10px #00ffc8;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.is-invalid {
+  border-color: #ff4d4d;
+  box-shadow: 0 0 5px #ff4d4d;
+}
+
+.invalid-feedback {
+  color: #ff4d4d;
+  margin-top: 5px;
+}
+
+.btn-outline-neon {
+  border: 2px solid #00ffc8;
+  color: #00ffc8;
+  background-color: transparent;
+  border-radius: 20px;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-outline-neon:hover {
+  background-color: #00ffc8;
+  color: #000;
+  box-shadow: 0 0 10px #00ffc8, 0 0 20px #00ffc8;
+}

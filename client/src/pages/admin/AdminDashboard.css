@@ -1,0 +1,91 @@
+/* AdminDashboard.css */
+
+/* Full Page Container */
+.dashboard-container {
+  background: linear-gradient(to bottom right, #0d0d0d, #000000);
+  border-radius: 20px;
+  padding: 40px 30px;
+  box-shadow: 0 0 15px rgba(0, 255, 200, 0.05);
+  min-height: 100vh;
+}
+
+/* Main Title */
+.dashboard-title {
+  color: #00ffc8;
+  font-size: 2.8rem;
+  font-weight: 700;
+  text-shadow: 0 0 12px rgba(0, 255, 200, 0.9);
+  background-color: transparent;
+  position: relative;
+  z-index: 10;
+}
+
+/* Subtitle */
+.dashboard-subtitle {
+  color: #a0a0a0;
+  font-size: 1.1rem;
+  margin-top: 0.3rem;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.15);
+  background-color: transparent;
+  position: relative;
+  z-index: 10;
+}
+
+/* Dashboard Cards */
+.dashboard-card {
+  background: rgba(13, 13, 13, 0.6);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(0, 255, 200, 0.15);
+  border-radius: 20px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 20px rgba(0, 255, 200, 0.05);
+  height: 100%;
+}
+
+/* Card Hover Effects */
+.dashboard-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 0 30px rgba(0, 255, 200, 0.3);
+}
+
+/* Card Headings */
+.dashboard-card h5 {
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 5px #00ffc8;
+}
+
+/* Card Description */
+.dashboard-card p {
+  color: #b0b0b0;
+  font-size: 0.95rem;
+}
+
+/* Neon Outline View Button */
+.dashboard-card .btn-outline-light {
+  border-color: #00ffc8;
+  color: #00ffc8;
+  font-weight: 500;
+  transition: 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 255, 200, 0.3);
+}
+
+.dashboard-card .btn-outline-light:hover {
+  background-color: #00ffc8;
+  color: #000000;
+  box-shadow: 0 0 15px #00ffc8;
+}
+
+/* Icon Circle */
+.icon-circle {
+  background: rgba(0, 255, 200, 0.1);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 1.8rem;
+  color: #00ffc8;
+  box-shadow: 0 0 12px rgba(0, 255, 200, 0.4);
+  margin-bottom: 10px;
+}

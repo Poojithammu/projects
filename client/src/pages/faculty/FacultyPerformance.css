@@ -1,0 +1,42 @@
+/* Main Card Container */
+.performance-card {
+  background: rgba(13, 13, 13, 0.95);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(0, 255, 200, 0.2);
+  color: white;
+}
+
+/* Individual KPI cards */
+.kpi-card {
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 255, 200, 0.15);
+  color: #00ffc8;
+  transition: all 0.3s ease;
+}
+.kpi-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 20px rgba(0, 255, 200, 0.3);
+}
+
+/* Chart cards */
+.chart-card {
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0, 255, 200, 0.15);
+  color: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.chart-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 25px rgba(0, 255, 200, 0.3);
+}
+
+/* Text colors */
+.text-primary {
+  color: #00ffc8 !important;
+}
+.text-secondary {
+  color: #00bfa6 !important;
+}

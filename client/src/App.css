@@ -1,0 +1,45 @@
+/* === App Global Theme === */
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #0a0a0a;
+  color: #f1f1f1;
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* === Route Container === */
+.main-app-container {
+  min-height: 100vh;
+  padding: 30px 20px;
+  background: radial-gradient(circle at top left, #101010, #000000);
+  transition: background 0.3s ease;
+}
+
+/* === Scrollbar Styling === */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00ffc8;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* === Toastify Overrides === */
+.Toastify__toast {
+  background-color: #1a1a1a;
+  color: #00ffc8;
+  border: 1px solid #00ffc8;
+  box-shadow: 0 0 10px rgba(0, 255, 200, 0.2);
+}
+
+.Toastify__progress-bar {
+  background: #00ffc8;
+}

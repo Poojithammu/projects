@@ -1,0 +1,142 @@
+.leave-dashboard-container {
+  background-color: #0d0d0d;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0, 255, 200, 0.1);
+  color: #e0e0e0;
+}
+
+.dashboard-title {
+  color: #00ffc8;
+  text-shadow: 0 0 5px #00ffc8;
+}
+
+.custom-select {
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  background: #101010;
+  color: #00ffc8;
+  border: 1px solid #00ffc8;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.custom-select:focus {
+  box-shadow: 0 0 10px rgba(0, 255, 200, 0.3);
+}
+
+.glass-table {
+  border-radius: 15px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(6px);
+  color: #e0e0e0;
+}
+
+.status-badge {
+  padding: 5px 10px;
+  border-radius: 1rem;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+.status-badge.approved {
+  background-color: #00c851;
+  color: #000;
+}
+
+.status-badge.rejected {
+  background-color: #ff4444;
+  color: #000;
+}
+
+.status-badge.pending {
+  background-color: #999;
+  color: #000;
+}
+
+.neon-btn {
+  padding: 6px 14px;
+  border: 2px solid;
+  font-weight: bold;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  transition: 0.3s;
+  text-transform: uppercase;
+}
+
+.neon-btn.green {
+  border-color: #00ffc8;
+  color: #00ffc8;
+  background: transparent;
+}
+
+.neon-btn.green:hover {
+  background-color: #00ffc8;
+  color: #000;
+  box-shadow: 0 0 10px #00ffc8;
+}
+
+.neon-btn.red {
+  border-color: #ff4444;
+  color: #ff4444;
+  background: transparent;
+}
+
+.neon-btn.red:hover {
+  background-color: #ff4444;
+  color: #000;
+  box-shadow: 0 0 10px #ff4444;
+}
+
+.neon-btn.grey {
+  border-color: #ccc;
+  color: #ccc;
+  background: transparent;
+}
+
+.neon-btn.grey:hover {
+  background-color: #ccc;
+  color: #000;
+}
+
+.rejection-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-card {
+  background: #111;
+  padding: 2rem;
+  border-radius: 15px;
+  border: 1px solid #00ffc8;
+  box-shadow: 0 0 15px rgba(0, 255, 200, 0.3);
+  width: 400px;
+  text-align: center;
+}
+
+.modal-card textarea {
+  width: 100%;
+  height: 80px;
+  border-radius: 10px;
+  border: none;
+  padding: 10px;
+  margin: 1rem 0;
+  resize: none;
+  background-color: #1a1a1a;
+  color: #eee;
+  border: 1px solid #00ffc8;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+}

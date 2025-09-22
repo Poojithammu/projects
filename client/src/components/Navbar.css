@@ -1,0 +1,80 @@
+/* Navbar base */
+.navbar-glass {
+  background: rgba(13, 13, 13, 0.7);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0, 255, 200, 0.1);
+}
+
+/* Brand Styling */
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.8rem;
+  color: #00ffc8 !important;
+  text-shadow: 0 0 8px #00ffc8;
+}
+
+.brand-highlight {
+  color: #ffffff;
+}
+
+/* Link styling */
+.nav-glow {
+  color: #ffffff !important;
+  font-weight: 500;
+  text-shadow: 0 0 5px rgba(0, 255, 200, 0.5);
+  transition: all 0.3s ease;
+}
+
+.nav-glow:hover {
+  color: #00ffc8 !important;
+  transform: translateY(-1px);
+}
+
+/* Active link */
+.active-link {
+  color: #00ffc8 !important;
+  border-bottom: 2px solid #00ffc8;
+  padding-bottom: 2px;
+}
+
+/* Logout button */
+.btn-outline-neon {
+  border: 1px solid #00ffc8;
+  color: #00ffc8;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-neon:hover {
+  background-color: #00ffc8;
+  color: #000;
+  box-shadow: 0 0 10px #00ffc8, 0 0 20px #00ffc8;
+}
+
+/* Custom toggler */
+.custom-toggler-icon {
+  width: 24px;
+  height: 2px;
+  background-color: #00ffc8;
+  display: block;
+  position: relative;
+}
+
+.custom-toggler-icon::before,
+.custom-toggler-icon::after {
+  content: "";
+  width: 24px;
+  height: 2px;
+  background-color: #00ffc8;
+  position: absolute;
+  left: 0;
+  transition: 0.3s ease-in-out;
+}
+
+.custom-toggler-icon::before {
+  top: -8px;
+}
+
+.custom-toggler-icon::after {
+  top: 8px;
+}

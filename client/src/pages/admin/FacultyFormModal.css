@@ -1,0 +1,178 @@
+/* FacultyFormModal.css */
+
+/* Container and spacing */
+.form-group-custom {
+  margin-bottom: 1.5rem;
+}
+
+/* Label style with subtle neon glow */
+.form-group-custom label {
+  font-weight: 600;
+  color: #00ffc8 !important; /* force bright neon cyan */
+  background: transparent !important;
+  display: block;
+  text-shadow:
+    0 0 8px rgba(0, 255, 200, 0.8),
+    0 0 16px rgba(0, 255, 200, 0.5),
+    0 0 24px rgba(0, 255, 200, 0.3);
+}
+
+
+
+/* Required star */
+.required {
+  color: #ff6f91; /* softer rose red */
+  font-weight: 700;
+  margin-left: 0.15rem;
+  text-shadow: none;
+}
+
+/* Input fields with glassmorphism and subtle neon borders */
+.input-custom {
+  border-radius: 16px;
+  border: 1.5px solid rgba(0, 255, 200, 0.4);
+  background: rgba(15, 15, 15, 0.6);
+  color: #c0fff9;
+  padding: 0.5rem 0.9rem;
+  font-weight: 500;
+  box-shadow:
+    inset 0 0 10px rgba(0, 255, 200, 0.15);
+  backdrop-filter: blur(10px);
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    background-color 0.3s ease;
+}
+
+/* Placeholder color */
+.input-custom::placeholder {
+  color: #559e92;
+}
+
+/* Focus effect with soft neon glow */
+.input-custom:focus {
+  border-color: #00ffc8;
+  box-shadow:
+    0 0 12px 3px rgba(0, 255, 200, 0.45),
+    inset 0 0 12px rgba(0, 255, 200, 0.3);
+  background-color: rgba(15, 15, 15, 0.8);
+  color: #e0fff8;
+  outline: none;
+}
+
+/* Invalid inputs: subtle red glow */
+.form-control.is-invalid {
+  border-color: #ff6f91;
+  background-color: rgba(255, 111, 145, 0.15);
+  color: #ff6f91;
+  box-shadow:
+    0 0 8px 2px rgba(255, 111, 145, 0.5);
+}
+
+/* Invalid input focus */
+.form-control.is-invalid:focus {
+  box-shadow:
+    0 0 12px 4px rgba(255, 111, 145, 0.7);
+  background-color: rgba(255, 111, 145, 0.25);
+  color: #fff0f3;
+  outline: none;
+}
+
+/* Submit button with gradient glass + neon glow */
+.submit-btn {
+  width: 100%;
+  padding: 0.75rem 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+  border-radius: 20px;
+  border: none;
+  color: #0d0d0d;
+  background: linear-gradient(135deg, rgba(0,255,200,0.85), rgba(0,191,166,0.85));
+  box-shadow:
+    0 4px 15px rgba(0, 255, 200, 0.5),
+    inset 0 0 8px rgba(0, 255, 200, 0.9);
+  backdrop-filter: blur(12px);
+  cursor: pointer;
+  transition: 
+    background 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.2s ease;
+}
+
+/* Hover & focus for submit */
+.submit-btn:hover:not(:disabled),
+.submit-btn:focus:not(:disabled) {
+  background: linear-gradient(135deg, #00ffc8, #00a891);
+  box-shadow:
+    0 6px 22px rgba(0, 255, 200, 0.85),
+    inset 0 0 14px rgba(0, 255, 200, 1);
+  transform: scale(1.05);
+  outline: none;
+}
+
+/* Disabled submit button */
+.submit-btn:disabled {
+  background: #222222;
+  box-shadow: none;
+  cursor: not-allowed;
+  opacity: 0.5;
+  transform: none;
+}
+
+/* Modal background */
+.modal-content {
+  background: rgba(10, 10, 10, 0.9);
+  border-radius: 24px;
+  border: 1px solid rgba(0, 255, 200, 0.25);
+  box-shadow:
+    0 0 40px rgba(0, 255, 200, 0.15);
+}
+
+/* Modal header styling */
+.modal-header {
+  border-bottom: 1px solid rgba(0, 255, 200, 0.15);
+  color: #00bfa6;
+  text-shadow:
+    0 0 6px rgba(0, 255, 200, 0.3);
+}
+
+/* Modal title */
+.modal-title {
+  font-weight: 800;
+  font-size: 1.8rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #00ffc8;
+  text-shadow:
+    0 0 8px rgba(0, 255, 200, 0.6);
+}
+
+/* Modal close button */
+.btn-close {
+  filter: brightness(0.7);
+  transition: filter 0.3s ease;
+}
+
+.btn-close:hover {
+  filter: brightness(1);
+}
+
+input[type="date"] {
+  position: relative;
+  z-index: 1;
+  color: #00ffc8; 
+  background-color: #0d0d0d; 
+  border: 1px solid #00ffc8;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(100%) brightness(150%);
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+}

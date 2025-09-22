@@ -1,0 +1,77 @@
+.neon-modal .modal-content {
+  background: rgba(13, 13, 13, 0.95);
+  border: 1px solid #00ffc8;
+  box-shadow: 0 0 20px rgba(0, 255, 200, 0.2);
+  color: #fff;
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+}
+
+.neon-title {
+  color: #00ffc8;
+  font-weight: bold;
+  text-shadow:
+    0 0 8px #00ffc8,
+    0 0 12px rgba(0, 255, 200, 0.6);
+}
+
+.form-group-custom {
+  margin-bottom: 1.2rem;
+}
+
+.form-group-custom label {
+  color: #00bfa6;
+  font-weight: 600;
+  text-shadow: 0 0 5px rgba(0, 255, 200, 0.3);
+}
+
+.form-group-custom input {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid #00ffc8;
+  color: white;
+  border-radius: 8px;
+  padding: 8px 12px;
+  box-shadow: inset 0 0 8px rgba(0, 255, 200, 0.2);
+  transition: all 0.3s ease;
+}
+
+.form-group-custom input:focus {
+  outline: none;
+  box-shadow: 0 0 10px #00ffc8, 0 0 20px #00ffc8;
+  border-color: #00ffc8;
+  background-color: rgba(0, 255, 200, 0.05);
+}
+
+.neon-button {
+  border: 1px solid #00ffc8;
+  color: #00ffc8;
+  font-weight: bold;
+  text-shadow: 0 0 5px #00ffc8;
+  transition: all 0.3s ease-in-out;
+}
+
+.neon-button:hover {
+  background-color: #00ffc8;
+  color: #000;
+  box-shadow: 0 0 15px #00ffc8, 0 0 25px #00ffc8;
+}
+
+input[type="date"] {
+  position: relative;
+  z-index: 1;
+  color: #00ffc8; 
+  background-color: #0d0d0d; 
+  border: 1px solid #00ffc8;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(100%) brightness(150%);
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+}

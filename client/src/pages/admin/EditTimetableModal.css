@@ -1,0 +1,51 @@
+/* Set a wider modal */
+.custom-edit-modal .modal-dialog {
+  max-width: 800px;
+}
+
+/* Optional: Style consistency with Premium Black Theme */
+.modal-dark {
+  background-color: #0d0d0d !important;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+}
+
+.neon-label {
+  font-weight: 600;
+  color: #00ffc8;
+  text-shadow: 0 0 5px rgba(0, 255, 200, 0.4);
+}
+
+.neon-input {
+  background-color: #111;
+  color: white;
+  border: 1px solid #00ffc8;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0, 255, 200, 0.1);
+}
+
+.neon-input:focus {
+  border-color: #00ffc8;
+  box-shadow: 0 0 10px rgba(0, 255, 200, 0.5);
+}
+
+input[type="date"] {
+  position: relative;
+  z-index: 1;
+  color: #00ffc8; 
+  background-color: #0d0d0d; 
+  border: 1px solid #00ffc8;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(100%) brightness(150%);
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+}

@@ -1,0 +1,56 @@
+/* AdminFeedbackPage.css */
+
+.admin-feedback-container {
+  background-color: #0d0d0d;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 255, 200, 0.12);
+  color: #e0e0e0;
+}
+
+h2 {
+  font-weight: bold;
+  color: #00ffc8;
+  text-shadow: 0 0 3px #00ffc8;
+  margin-bottom: 2rem;
+}
+
+.feedback-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(0, 255, 200, 0.1);
+  border-radius: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  backdrop-filter: blur(8px);
+  color: #e0e0e0;
+}
+
+.feedback-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(0, 255, 200, 0.3);
+}
+
+.card-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #00ffc8;
+  text-shadow: 0 0 2px #00ffc8;
+}
+
+.card-text strong {
+  color: #ffffff;
+}
+
+.alert {
+  border-radius: 1rem;
+  font-size: 1rem;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(0, 255, 200, 0.2);
+  color: #e0e0e0;
+  text-align: center;
+}
+
+.text-center {
+  color: #ccc;
+  margin-top: 1rem;
+}

@@ -1,0 +1,84 @@
+.student-table-wrapper {
+    background: rgba(13, 13, 13, 0.85);
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 8px 16px rgba(0, 255, 200, 0.1);
+    overflow-x: auto;
+}
+
+/* Row hover with neon glow */
+.table-row-hover:hover {
+    background-color: rgba(0, 255, 200, 0.1);
+    box-shadow: inset 0 0 10px #00ffc8;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Table striped rows for dark theme */
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Sticky header */
+.sticky-header th {
+    position: sticky;
+    top: 0;
+    background-color: #121212;
+    z-index: 1;
+}
+
+/* General table styling */
+.table {
+    color: #00ffc8;
+    border-collapse: separate;
+    border-spacing: 0 0.3rem;
+}
+
+.table th, .table td {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+    border-top: none;
+}
+
+/* Small buttons */
+.btn-sm {
+    font-size: 0.85rem;
+    padding: 0.25rem 0.5rem;
+}
+
+/* Outline buttons */
+.btn-outline-info {
+    color: #00ffc8;
+    border: 1px solid #00ffc8;
+    background: transparent;
+    transition: 0.3s;
+}
+
+.btn-outline-info:hover {
+    background-color: #00ffc8;
+    color: #000;
+    box-shadow: 0 0 15px #00ffc8;
+}
+
+.btn-outline-danger {
+    color: #ff4d4d;
+    border: 1px solid #ff4d4d;
+    background: transparent;
+    transition: 0.3s;
+}
+
+.btn-outline-danger:hover {
+    background-color: #ff4d4d;
+    color: #000;
+    box-shadow: 0 0 15px #ff4d4d;
+}
+
+/* Optional custom scrollbar */
+.student-table-wrapper::-webkit-scrollbar {
+    height: 8px;
+}
+.student-table-wrapper::-webkit-scrollbar-thumb {
+    background: #00ffc8;
+    border-radius: 4px;
+}

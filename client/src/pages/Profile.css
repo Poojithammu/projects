@@ -1,0 +1,100 @@
+/* Profile.css */
+
+.profile-bg {
+  min-height: 100vh;
+  background: linear-gradient(145deg, #000000, #0d0d0d);
+  padding: 40px 0;
+}
+
+.profile-card {
+  max-width: 600px;
+  width: 100%;
+  background: rgba(20, 20, 20, 0.6);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 255, 200, 0.1);
+  box-shadow: 0 0 20px rgba(0, 255, 200, 0.1);
+  color: white;
+}
+
+.text-neon {
+  color: #00ffc8;
+  text-shadow: 0 0 5px #00ffc8, 0 0 10px #00ffc8;
+  font-weight: bold;
+}
+
+.form-group-custom {
+  margin-bottom: 1.5rem;
+}
+
+.form-group-custom label {
+  color: #00ffc8;
+  font-weight: 600;
+  margin-bottom: 5px;
+  display: block;
+  text-shadow: 0 0 5px rgba(0, 255, 200, 0.3);
+}
+
+.form-group-custom input {
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid #00ffc8;
+  border-radius: 20px;
+  padding: 10px 15px;
+  color: white;
+  width: 100%;
+  transition: 0.3s;
+}
+
+.form-group-custom input:focus {
+  outline: none;
+  box-shadow: 0 0 10px #00ffc8;
+  border-color: #00ffc8;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.btn-neon {
+  background-color: transparent;
+  border: 2px solid #00ffc8;
+  color: #00ffc8;
+  padding: 10px;
+  border-radius: 20px;
+  transition: all 0.3s ease-in-out;
+  font-weight: 600;
+}
+
+.btn-neon:hover {
+  background-color: #00ffc8;
+  color: #000;
+  box-shadow: 0 0 15px #00ffc8;
+}
+
+.input-error {
+  border-color: #ff4d4f;
+  box-shadow: 0 0 5px #ff4d4f;
+}
+
+.text-danger {
+  color: #ff4d4f;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+input[type="date"] {
+  position: relative;
+  z-index: 1;
+  color: #00ffc8; 
+  background-color: #0d0d0d; 
+  border: 1px solid #00ffc8;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(100%) brightness(150%);
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+}
