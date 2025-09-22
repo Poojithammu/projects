@@ -1,0 +1,98 @@
+/* Base styles */
+.login-body {
+  font-family: 'Poppins', sans-serif;
+  background: #0a3d62;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+}
+
+.login-container {
+  background: #ffffff;
+  max-width: 400px;
+  width: 100%;
+  padding: 30px 25px;
+  border-radius: 12px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.3);
+  color: #0a3d62;
+}
+
+.login-heading {
+  text-align: center;
+  margin-bottom: 25px;
+  font-weight: 600;
+  font-size: 1.8rem;
+  color: #002b80;
+}
+
+.login-label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #004080;
+}
+
+.login-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1.5px solid #a3c5ff;
+  border-radius: 6px;
+  font-size: 1rem;
+  background: #f8fbff;
+  color: #002b80;
+  outline: none;
+  transition: border-color 0.25s ease;
+}
+
+.login-input:focus {
+  border-color: #0050d1;
+}
+
+.login-button {
+  width: 100%;
+  background: #0050d1;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 6px 14px rgba(0, 80, 209, 0.25);
+  transition: background 0.3s ease;
+}
+
+.login-button:hover {
+  background: #003ea1;
+}
+
+/* Responsive styling */
+@media (max-width: 480px) {
+  .login-container {
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .login-heading {
+    font-size: 1.5rem;
+  }
+
+  .login-label {
+    font-size: 0.9rem;
+  }
+
+  .login-input {
+    font-size: 0.95rem;
+    padding: 8px;
+  }
+
+  .login-button {
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+}

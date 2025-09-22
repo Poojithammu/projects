@@ -1,0 +1,186 @@
+/* Reset and base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #e0eafc, #cfdef3);
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Form container */
+form {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  padding: 40px;
+  max-width: 650px;
+  width: 100%;
+  box-shadow: 0 10px 30px rgba(0, 40, 120, 0.2);
+  transition: box-shadow 0.3s ease;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Section title */
+form h2 {
+  text-align: center;
+  color: #1a356d;
+  margin-bottom: 30px;
+  font-size: 1.8rem;
+}
+
+/* Labels */
+label, legend {
+  display: block;
+  font-weight: 600;
+  color: #1a356d;
+  margin-bottom: 8px;
+  font-size: 1rem;
+}
+
+/* Inputs and selects */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="date"],
+input[type="tel"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 1rem;
+  font-family: inherit;
+  color: #172b4d;
+  border: 2px solid #d5def0;
+  border-radius: 10px;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+  margin-bottom: 20px;
+  resize: vertical;
+  background-color: #fff;
+}
+
+/* Focus effect */
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #4b6fff;
+  box-shadow: 0 0 10px rgba(75, 111, 255, 0.4);
+  outline: none;
+}
+
+/* Checkbox group container */
+fieldset {
+  border: none;
+  padding: 0;
+  margin-bottom: 25px;
+}
+
+/* Checkbox labels inline */
+fieldset label,
+.terms-label {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  color: #33475b;
+  font-size: 0.95rem;
+}
+
+input[type="checkbox"] {
+  margin-right: 8px;
+  transform: scale(1.2);
+  cursor: pointer;
+  accent-color: #4b6fff;
+}
+
+/* Submit button */
+button[type="submit"],
+button.submit-btn {
+  width: 100%;
+  background: linear-gradient(to right, #4b6fff, #5f9eff);
+  color: white;
+  padding: 14px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(75, 111, 255, 0.3);
+}
+
+button[type="submit"]:hover,
+button.submit-btn:hover {
+  background: linear-gradient(to right, #3a5ce0, #4c87ff);
+  box-shadow: 0 6px 14px rgba(75, 111, 255, 0.45);
+  transform: scale(1.02);
+}
+
+/* Error text */
+p {
+  margin-top: -12px;
+  margin-bottom: 14px;
+  color: #d93025;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* Responsive tweaks */
+@media (max-width: 640px) {
+  body {
+    padding: 20px 10px;
+  }
+
+  form {
+    padding: 25px 20px;
+    border-radius: 12px;
+  }
+
+  form h2 {
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+  }
+
+  label, legend {
+    font-size: 0.95rem;
+  }
+
+  input,
+  select,
+  textarea {
+    padding: 10px 14px;
+    font-size: 0.95rem;
+  }
+
+  fieldset label,
+  .terms-label {
+    margin-right: 12px;
+    font-size: 0.9rem;
+  }
+
+  button[type="submit"],
+  button.submit-btn {
+    font-size: 1rem;
+    padding: 12px;
+  }
+}

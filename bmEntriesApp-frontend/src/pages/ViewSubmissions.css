@@ -1,0 +1,159 @@
+/* Container */
+.view-submissions-container {
+  max-width: 960px;
+  margin: 2rem auto 4rem;
+  padding: 2rem 2.5rem;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 40, 120, 0.15);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #1a356d;
+  user-select: text;
+  overflow-x: auto;
+}
+
+/* Page title */
+.neon-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  text-align: center;
+  color: #1a356d;
+  margin-bottom: 2rem;
+}
+
+/* Loading and no-data messages */
+.loading-text,
+.no-data {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #3f6ad8;
+  font-weight: 600;
+  margin-top: 3rem;
+}
+
+/* Export Button */
+.export-btn {
+  background-color: #3f6ad8;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 10px rgba(63, 106, 216, 0.4);
+}
+
+.export-btn:hover {
+  background-color: #2f53b4;
+  box-shadow: 0 6px 14px rgba(47, 83, 180, 0.7);
+}
+
+/* Table wrapper */
+.table-wrapper {
+  overflow-x: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(63, 106, 216, 0.15);
+}
+
+/* Table styling */
+.submissions-table {
+  width: 100%;
+  min-width: 1000px; /* Prevent columns from squishing */
+  border-collapse: separate;
+  border-spacing: 0 6px;
+  font-size: 0.95rem;
+  color: #172b4d;
+  background: #f7faff;
+  border-radius: 12px;
+  box-shadow: inset 0 0 10px #dbe8ff;
+}
+
+/* Table header */
+.submissions-table thead tr {
+  background: #e1eaff;
+  color: #1a356d;
+  font-weight: 700;
+  text-align: left;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(63, 106, 216, 0.25);
+}
+
+.submissions-table thead th {
+  padding: 12px 18px;
+  border-bottom: 2px solid #3f6ad8;
+  user-select: none;
+  white-space: nowrap;
+}
+
+/* Table body rows */
+.submissions-table tbody tr {
+  background: white;
+  box-shadow: 0 2px 8px rgba(63, 106, 216, 0.1);
+  transition: background-color 0.3s ease;
+  cursor: default;
+  border-radius: 8px;
+}
+
+.submissions-table tbody tr:hover {
+  background-color: #e6f0ff;
+}
+
+/* Table cells */
+.submissions-table tbody td {
+  padding: 10px 18px;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+/* Last column */
+.submissions-table th:last-child,
+.submissions-table td:last-child {
+  border-right: none;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .neon-title {
+    font-size: 2rem;
+  }
+
+  .submissions-table {
+    font-size: 0.85rem;
+  }
+
+  .submissions-table thead th,
+  .submissions-table tbody td {
+    padding: 8px 12px;
+  }
+
+  .export-btn {
+    padding: 10px 18px;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .view-submissions-container {
+    padding: 1rem 1rem;
+  }
+
+  .neon-title {
+    font-size: 1.6rem;
+  }
+
+  .export-btn {
+    padding: 8px 14px;
+    font-size: 0.9rem;
+  }
+
+  .submissions-table {
+    font-size: 0.8rem;
+  }
+
+  .submissions-table thead th,
+  .submissions-table tbody td {
+    padding: 6px 10px;
+  }
+}
